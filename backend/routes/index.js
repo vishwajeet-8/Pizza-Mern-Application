@@ -10,6 +10,10 @@ import {
 import auth from "../middlewares/auth";
 import admin from "../middlewares/admin";
 
+router.get("/", function (req, res) {
+  res.json({ name: "vishu" });
+});
+
 router.post("/register", registerController.register);
 router.post("/login", loginController.login);
 router.get("/me", auth, userController.me);
